@@ -1,15 +1,21 @@
 <%- include('partials/header'); -%>
 
-  <% Object.keys(myPosts).forEach(function(prop) { %>
-    <div class="card">
+
+  <% for( let index=0; index < posts.length; index++ ) { %>
+
+
+    <div class="card" style="width:100rem;">
       <div class="card-body">
-        <div class="card-title">
-          <% myPosts.prop[0] %>
-        </div>
-        <p class="card-text article">
-          <% myPosts.prop[1] %>
+        <h5 class="card-title post-title">
+          
+          <a style="text-decoration:none;" href="/<%=posts[index].postId;%>"><%=posts[index].title;%></a>
+        </h5>
+        <p class="card-text">
+          <%=posts[index].content.substring(0,100);%>...
+          <a class="read-more" href="/<%=posts[index].postId;%>">Read More</a>
         </p>
+
       </div>
     </div>
-    }); %>
-    <%- include('partials/footer'); -%>
+    <% } %>
+      <%- include('partials/footer'); -%>

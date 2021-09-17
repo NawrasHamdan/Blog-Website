@@ -26,11 +26,28 @@ body{
 }
 
 .post-title{
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: rgb(0, 195, 255);
     padding-bottom: 2%;
 }
 
 .article{
     padding-left: 3%;
+}
+
+.mb-3{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.read-more{
+    font-size: 0.7rem;
+    color: rgb(92, 172, 2);
+    text-decoration:none;
+}
+
+.read-more:hover{
+    color: brown;
+    font-size: 1.5rem;
+    text-decoration:none;
 }
