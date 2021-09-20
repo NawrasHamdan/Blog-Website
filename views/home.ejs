@@ -1,18 +1,18 @@
 <%- include('partials/header'); -%>
 
 
-  <% for( let index=0; index < posts.length; index++ ) { %>
+  <% for( let index=0; index < data.length; index++ ) { %>
 
 
     <div class="card" style="width:100rem;">
       <div class="card-body">
         <h5 class="card-title post-title">
           
-          <a style="text-decoration:none;" href="/<%=posts[index].postId;%>"><%=posts[index].title;%></a>
+          <a style="text-decoration:none;" href="/<%=data[index]._id;%>"><%=data[index].title;%></a>
         </h5>
         <p class="card-text">
-          <%=posts[index].content.substring(0,100);%>...
-          <a class="read-more" href="/<%=posts[index].postId;%>">Read More</a>
+          <%=data[index].content.substring(0,100);%>...
+          <a class="read-more" href="/<%=data[index]._id;%>">Read More</a>
         </p>
 
       </div>
